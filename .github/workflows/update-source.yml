@@ -2,7 +2,7 @@ name: Update AltStore Source
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 6 hours
+    - cron: "*/15 * * * *"
   push:
     paths:
       - config.json
