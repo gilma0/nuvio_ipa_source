@@ -1,30 +1,33 @@
 {
-  "name": "Sam's Source",
-  "identifier": "com.sam.altsource",
-  "tintColor": "7e3cff",
-  "subtitle": "IPAs, kept current",
+  "name": "Nuvio Mobile",
+  "identifier": "com.gilmatsliah.nuvio.source",
+  "iconURL": "https://github.com/NuvioMedia.png",
+  "headerURL": "https://opengraph.githubassets.com/1/NuvioMedia/NuvioMobile",
+  "tintColor": "6750A4",
+  "subtitle": "Unofficial AltStore source for Nuvio Mobile",
+  "description": "An unofficial AltStore and SideStore source that tracks IPA releases published by the official Nuvio Mobile GitHub repository. All downloads are served directly from NuvioMedia/NuvioMobile.",
+  "website": "https://github.com/NuvioMedia/NuvioMobile",
   "apps": [
     {
-      "name": "Example App (auto-tracked from releases)",
-      "bundleIdentifier": "com.6gr8.exampleapp",
-      "developerName": "6gr8",
-      "localizedDescription": "Pulled automatically from the upstream repo's GitHub Releases.",
-      "iconURL": "https://6gr8.github.io/deno.io/icon.png",
-      "versions": []
-    },
-    {
-      "name": "Example App (static, hand-listed)",
-      "bundleIdentifier": "com.6gr8.otherapp",
-      "developerName": "6gr8",
-      "localizedDescription": "Use this style if the IPAs are hosted as plain files, not Release assets.",
-      "iconURL": "https://6gr8.github.io/deno.io/icon2.png",
+      "name": "Nuvio",
+      "bundleIdentifier": "com.nuvio.media",
+      "developerName": "Nuvio Media",
+      "localizedDescription": "Nuvio is a modern media hub for browsing metadata and playing media provided by user-installed extensions and user-provided sources. This is an unofficial AltStore listing that links directly to release files published by the official Nuvio Mobile repository.",
+      "iconURL": "https://github.com/NuvioMedia.png",
       "versions": [
         {
-          "version": "1.2.0",
-          "date": "2026-06-11",
-          "downloadURL": "https://6gr8.github.io/deno.io/otherapp-1.2.0.ipa",
-          "size": 18234567,
-          "minOSVersion": "14.0"
+          "version": "0.4.11",
+          "date": "2026-08-26",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.11/nuvio-0.4.11-full-release.ipa",
+          "size": 51638510,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "0.4.0-alpha",
+          "date": "2025-07-27",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.0-alpha/Alpha4.ipa",
+          "size": 33142764,
+          "minOSVersion": "16.0"
         }
       ]
     }
