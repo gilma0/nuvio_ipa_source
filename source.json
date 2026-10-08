@@ -16,6 +16,13 @@
       "iconURL": "https://github.com/NuvioMedia.png",
       "versions": [
         {
+          "version": "0.5.8-beta",
+          "date": "2026-10-08",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.8-beta/nuvio-0.5.8-full-release.ipa",
+          "size": 67558904,
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "0.5.7-beta",
           "date": "2026-10-06",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.7-beta/nuvio-0.5.7-full-release.ipa",
