@@ -54,7 +54,7 @@ def versions_from_releases(repo, pattern):
 def build_app(app):
     meta = {k: app[k] for k in (
         "name", "bundleIdentifier", "developerName",
-        "localizedDescription", "iconURL",
+        "localizedDescription", "iconURL", "subtitle", "tintColor",
     ) if k in app}
 
     src = app.get("source", {})
@@ -64,6 +64,9 @@ def build_app(app):
             src["repo"], src.get("ipaAssetPattern", r"\.ipa$"))
     else:  # static
         versions = src.get("versions", [])
+
+    if not versions:
+        raise ValueError(f"No IPA versions found for {app['name']}; refusing to publish an empty listing")
 
     for v in versions:
         v.setdefault("minOSVersion", app.get("minOSVersion", "14.0"))

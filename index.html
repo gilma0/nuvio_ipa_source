@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nuvio · App source</title>
+<style>
+[hidden]{display:none!important} body{font:17px/1.6 system-ui,sans-serif;background:#111424;color:#f3f3ff;max-width:680px;margin:10vh auto;padding:24px}
+a{color:#bbb1ff} .button{display:inline-block;background:#7057d9;color:white;padding:12px 20px;border-radius:12px;margin:8px 8px 8px 0;text-decoration:none}
+code{overflow-wrap:anywhere} #status{color:#c6c8da}
+</style>
+<h1>Nuvio</h1>
+<p>An unofficial source. IPA downloads come directly from the upstream project's GitHub releases.</p>
+<p id="status" role="status">Loading the latest release…</p>
+<a class="button" id="live" hidden>Install in LiveContainer</a>
+<a class="button" id="side" hidden>Add source to SideStore</a>
+<p>Open this page in Safari on your iPhone or iPad, with the selected app already installed. Tap a button if your browser does not open it automatically.</p>
+<p>LiveContainer must already be installed and configured.</p>
+<p><a id="download" hidden>Download latest IPA</a> · <a href="source.json">Source JSON</a> · <a href="https://github.com/NuvioMedia/NuvioMobile">Upstream project</a></p>
+<p>Manual source URL: <code id="source"></code></p>
+<script>
+const sourceURL = new URL('source.json', location.href).href;
+document.getElementById('source').textContent = sourceURL;
+const side = document.getElementById('side');
+side.href = 'sidestore://source?url=' + encodeURIComponent(sourceURL);
+side.hidden = false;
+const action = new URLSearchParams(location.search).get('action');
+if (action === 'sidestore') location.href = side.href;
+fetch('source.json', {cache: 'no-store'})
+  .then(response => { if (!response.ok) throw new Error('Source unavailable'); return response.json(); })
+  .then(source => {
+    const latest = source.apps[0].versions[0];
+    const url = new URL(latest.downloadURL);
+    if (url.protocol !== 'https:') throw new Error('Invalid IPA URL');
+    const live = document.getElementById('live');
+    live.href = 'livecontainer://install?url=' + encodeURIComponent(url.href);
+    live.hidden = false;
+    const download = document.getElementById('download');
+    download.href = url.href; download.hidden = false;
+    document.getElementById('status').textContent = 'Latest version: ' + latest.version;
+    if (action === 'livecontainer') location.href = live.href;
+  })
+  .catch(() => { document.getElementById('status').textContent = 'Could not load the latest IPA. Reload this page or use the upstream releases link.'; });
+</script>
+</html>

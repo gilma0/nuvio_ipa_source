@@ -1,53 +1,68 @@
-name: Update AltStore Source
+name: Update and publish source
 
 on:
   schedule:
-    - cron: "*/15 * * * *"  # every 15 minutes
+    - cron: "*/15 * * * *"
   push:
+    branches: [main]
     paths:
       - config.json
-      - scripts/generate_source.py
+      - scripts/**
+      - index.html
       - .github/workflows/update-source.yml
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: update-altstore-source
+  group: source-and-pages
   cancel-in-progress: false
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+          ref: main
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Generate source.json
+      - name: Generate source from upstream releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/generate_source.py
-
-      - name: Commit and push if changed
+      - name: Commit updated source
         run: |
-          if [ -n "$(git status --porcelain source.json)" ]; then
+          if ! git diff --quiet -- source.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
             git add source.json
             git commit -m "chore: update source.json"
-
             git pull --rebase origin main
             git push origin HEAD:main
-          else
-            echo "No changes."
           fi
+      - name: Prepare public files
+        run: |
+          mkdir -p _site
+          cp source.json index.html _site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

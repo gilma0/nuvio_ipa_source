@@ -14,6 +14,8 @@
       "developerName": "Nuvio Media",
       "localizedDescription": "Nuvio is a modern media hub for browsing metadata and playing media provided by user-installed extensions and user-provided sources. This is an unofficial AltStore listing that links directly to release files published by the official Nuvio Mobile repository.",
       "iconURL": "https://github.com/NuvioMedia.png",
+      "subtitle": "A modern media hub for iOS",
+      "tintColor": "6750A4",
       "versions": [
         {
           "version": "0.6.4-beta",
