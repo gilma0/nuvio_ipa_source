@@ -21,7 +21,7 @@ code{overflow-wrap:anywhere} #status{color:#c6c8da}
 const sourceURL = new URL('source.json', location.href).href;
 document.getElementById('source').textContent = sourceURL;
 const live = document.getElementById('live');
-live.href = 'livecontainer://sources?url=' + encodeURIComponent(sourceURL);
+live.href = 'livecontainer://source?url=' + encodeURIComponent(sourceURL);
 live.hidden = false;
 const side = document.getElementById('side');
 side.href = 'sidestore://source?url=' + encodeURIComponent(sourceURL);

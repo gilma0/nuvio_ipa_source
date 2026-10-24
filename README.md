@@ -31,4 +31,4 @@ To regenerate locally with Python 3.12 or later:
 python scripts/generate_source.py
 ```
 
-Links use the documented [SideStore source URL scheme](https://docs.sidestore.io/docs/advanced/url-schema) (`sidestore://source?url=…`) and [LiveContainer source URL scheme](https://github.com/LiveContainer/LiveContainer/releases/tag/3.7.0) (`livecontainer://sources?url=…`). Both receive this repository’s `source.json` URL. The HTTPS landing page allows the README buttons to open these app URL schemes.
+Links use the [SideStore source URL scheme](https://docs.sidestore.io/docs/advanced/url-schema) (`sidestore://source?url=…`) and [LiveContainer source URL scheme](https://github.com/LiveContainer/LiveContainer/blob/main/LiveContainerSwiftUI/Views/LCAltStoreSourcesView.swift) (`livecontainer://source?url=…`). Both receive this repository’s `source.json` URL. The HTTPS landing page allows the README buttons to open these app URL schemes.
