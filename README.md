@@ -25,6 +25,8 @@ GitHub can disable scheduled workflows after 60 days of repository inactivity. R
 
 Edit `config.json` to change source/app metadata or the upstream release asset pattern. Release mode includes published prereleases with matching IPA assets, preserving Nuvio's beta release behavior. Static mode accepts an explicit `versions` array.
 
+`source.versionTagPattern` extracts the IPA's numeric version from Nuvio's release tags: `0.6.9-beta` becomes `0.6.9`. SideStore compares `versions[].version` with `CFBundleShortVersionString` inside the IPA and rejects an exact mismatch. The release tag and download URL remain unchanged, so beta releases still appear in the source. This rule also corrects older alpha/beta listings. Unrecognized tag formats stop publication instead of guessing an app version.
+
 To regenerate locally with Python 3.12 or later:
 
 ```sh

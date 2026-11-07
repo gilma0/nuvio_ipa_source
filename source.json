@@ -18,182 +18,182 @@
       "tintColor": "6750A4",
       "versions": [
         {
-          "version": "0.6.9-beta",
+          "version": "0.6.9",
           "date": "2026-11-06",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.9-beta/nuvio-0.6.9-full-release.ipa",
           "size": 69322992,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.6.8-beta",
+          "version": "0.6.8",
           "date": "2026-11-05",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.8-beta/nuvio-0.6.8-full-release.ipa",
           "size": 68872061,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.6.7-beta",
+          "version": "0.6.7",
           "date": "2026-11-04",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.7-beta/nuvio-0.6.7-full-release.ipa",
           "size": 68798444,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.6.6-beta",
+          "version": "0.6.6",
           "date": "2026-10-31",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.6-beta/nuvio-0.6.6-full-release.ipa",
           "size": 68521101,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.6.5-beta",
+          "version": "0.6.5",
           "date": "2026-10-27",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.5-beta/nuvio-0.6.5-full-release.ipa",
           "size": 67965485,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.6.4-beta",
+          "version": "0.6.4",
           "date": "2026-10-23",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.4-beta/nuvio-0.6.4-full-release.ipa",
           "size": 67805794,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.6.3-beta",
+          "version": "0.6.3",
           "date": "2026-10-21",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.3-beta/nuvio-0.6.3-full-release.ipa",
           "size": 68815810,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.6.2-beta",
+          "version": "0.6.2",
           "date": "2026-10-18",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.2-beta/nuvio-0.6.2-full-release.ipa",
           "size": 68666779,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.6.1-beta",
+          "version": "0.6.1",
           "date": "2026-10-16",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.1-beta/nuvio-0.6.1-full-release.ipa",
           "size": 68517984,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.6.0-beta",
+          "version": "0.6.0",
           "date": "2026-10-16",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.0-beta/nuvio-0.6.0-full-release.ipa",
           "size": 68513753,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.10-beta",
+          "version": "0.5.10",
           "date": "2026-10-14",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.10-beta/nuvio-0.5.10-full-release.ipa",
           "size": 67643251,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.9-beta",
+          "version": "0.5.9",
           "date": "2026-10-10",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.9-beta/nuvio-0.5.9-full-release.ipa",
           "size": 67606241,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.8-beta",
+          "version": "0.5.8",
           "date": "2026-10-08",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.8-beta/nuvio-0.5.8-full-release.ipa",
           "size": 67558904,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.7-beta",
+          "version": "0.5.7",
           "date": "2026-10-06",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.7-beta/nuvio-0.5.7-full-release.ipa",
           "size": 66836754,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.6-beta",
+          "version": "0.5.6",
           "date": "2026-10-02",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.6-beta/nuvio-0.5.6-full-release.ipa",
           "size": 66690752,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.5-beta",
+          "version": "0.5.5",
           "date": "2026-09-30",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.5-beta/nuvio-0.5.5-full-release.ipa",
           "size": 66647562,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.4-beta",
+          "version": "0.5.4",
           "date": "2026-09-28",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.4-beta/nuvio-0.5.4-full-release.ipa",
           "size": 66389579,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.3-beta",
+          "version": "0.5.3",
           "date": "2026-09-27",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.3-beta/nuvio-0.5.3-full-release.ipa",
           "size": 66299682,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.2-beta",
+          "version": "0.5.2",
           "date": "2026-09-25",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.2-beta/nuvio-0.5.2-full-release.ipa",
           "size": 66138236,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.1-beta",
+          "version": "0.5.1",
           "date": "2026-09-23",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.1-beta/nuvio-0.5.1-full-release.ipa",
           "size": 66042992,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.5.0-beta",
+          "version": "0.5.0",
           "date": "2026-09-22",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.0-beta/nuvio-0.5.0-full-release.ipa",
           "size": 66006978,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.4.26-beta",
+          "version": "0.4.26",
           "date": "2026-09-21",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/nuvio-0.4.26-full-release.ipa",
           "size": 65234840,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.4.25-beta",
+          "version": "0.4.25",
           "date": "2026-09-19",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/nuvio-0.4.25-full-release.ipa",
           "size": 65152407,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.4.24-beta",
+          "version": "0.4.24",
           "date": "2026-09-18",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa",
           "size": 51517735,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.4.23-beta",
+          "version": "0.4.23",
           "date": "2026-09-17",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
           "size": 51420909,
           "minOSVersion": "16.0"
         },
         {
-          "version": "0.4.22-beta",
+          "version": "0.4.22",
           "date": "2026-09-16",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.22-beta/nuvio-0.4.22-full-release.ipa",
           "size": 51383038,

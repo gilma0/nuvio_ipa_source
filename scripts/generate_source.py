@@ -28,7 +28,21 @@ def gh_get(url):
         return json.load(r)
 
 
-def versions_from_releases(repo, pattern):
+def version_from_tag(tag, version_pattern=None):
+    """Separate an upstream release label from its IPA marketing version.
+
+    Nuvio tags releases as 0.6.9-beta, but CFBundleShortVersionString is 0.6.9.
+    Other apps can retain their tag unchanged by omitting versionTagPattern.
+    """
+    if version_pattern:
+        match = re.fullmatch(version_pattern, tag)
+        if not match or not match.groupdict().get("version"):
+            raise ValueError(f"Release tag {tag!r} does not match versionTagPattern")
+        return match.group("version")
+    return tag.removeprefix("v") or "0.0"
+
+
+def versions_from_releases(repo, pattern, version_pattern=None):
     pat = re.compile(pattern)
     out = []
     releases = gh_get(f"{GITHUB_API}/repos/{repo}/releases?per_page=100")
@@ -38,7 +52,7 @@ def versions_from_releases(repo, pattern):
         asset = next((a for a in rel.get("assets", []) if pat.search(a["name"])), None)
         if not asset:
             continue
-        ver = (rel.get("tag_name") or "").lstrip("v") or "0.0"
+        ver = version_from_tag(rel.get("tag_name") or "", version_pattern)
         date = (rel.get("published_at") or "")[:10] or \
             datetime.now(timezone.utc).strftime("%Y-%m-%d")
         out.append({
@@ -61,7 +75,8 @@ def build_app(app):
     mode = src.get("mode", "releases")
     if mode == "releases":
         versions = versions_from_releases(
-            src["repo"], src.get("ipaAssetPattern", r"\.ipa$"))
+            src["repo"], src.get("ipaAssetPattern", r"\.ipa$"),
+            src.get("versionTagPattern"))
     else:  # static
         versions = src.get("versions", [])
 

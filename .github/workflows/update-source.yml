@@ -8,6 +8,7 @@ on:
     paths:
       - config.json
       - scripts/**
+      - tests/**
       - index.html
       - .github/workflows/update-source.yml
   workflow_dispatch:
@@ -31,6 +32,8 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
+      - name: Check source version handling
+        run: python -m unittest discover -s tests -v
       - name: Generate source from upstream releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
