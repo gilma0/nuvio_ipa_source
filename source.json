@@ -18,6 +18,13 @@
       "tintColor": "6750A4",
       "versions": [
         {
+          "version": "1.1.0",
+          "date": "2026-11-16",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/1.1.0-beta.1/nuvio-1.1.0-beta.1-full-release.ipa",
+          "size": 70401015,
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "1.0.0",
           "date": "2026-11-15",
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/1.0.0/nuvio-1.0.0-full-release.ipa",
